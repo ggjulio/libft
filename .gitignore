@@ -2,3 +2,5 @@ a.out
 *~
 main.c
 .vscode
+unit_test.h
+unit_test.c
