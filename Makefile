@@ -16,7 +16,7 @@ clean:
 	@/bin/rm -f $(OBJ)
 	@echo ".o removed"
 
-fclean: clean $(NAME)
+fclean: clean
 	@/bin/rm -f $(NAME)
 	@echo "lib removed"
 
