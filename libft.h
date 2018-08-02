@@ -21,6 +21,11 @@ void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 void	ft_putnbr(int n);
 size_t	ft_strlen(const char *s);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 
 
 /*
@@ -45,11 +50,7 @@ strnstr
 strcmp
 strncmp
 atoi
-isalpha
-isdigit
-isalnum
-isascii
-isprint
+
 toupper
 tolower
 
@@ -91,6 +92,9 @@ typedef struct      s_list
 	size_t          content_size;
 	struct s_list   *next;
 }                   t_list;
+
+//Optionnels
+int isspace(int c);
 
 ft_lstnew
 ft_lstdelone
