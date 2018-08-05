@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/03 01:57:20 by jugonzal          #+#    #+#             */
-/*   Updated: 2018/08/03 01:57:20 by jugonzal         ###   ########.fr       */
+/*   Created: 2018/08/03 03:35:45 by jugonzal          #+#    #+#             */
+/*   Updated: 2018/08/03 03:35:45 by jugonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+void	ft_bzero(void *s, size_t n)
 {
-	int i;
-	int j;
-
-	if (!ft_strlen(needle))
-		return ((char *)haystack);
-	i = 0;
-	while (haystack[i])
-	{
-		j = 0;
-		while (haystack[i + j] == needle[j])
-		{
-			if (!needle[j + 1])
-				return ((char *)&haystack[i]);
-			j++;
-		}
-		i++;
-	}
-	return (NULL);
+	ft_memset(s, 0, n);
 }

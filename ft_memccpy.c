@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/03 01:57:20 by jugonzal          #+#    #+#             */
-/*   Updated: 2018/08/03 01:57:20 by jugonzal         ###   ########.fr       */
+/*   Created: 2018/08/05 04:56:27 by jugonzal          #+#    #+#             */
+/*   Updated: 2018/08/05 04:56:27 by jugonzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *haystack, const char *needle)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	int i;
-	int j;
+	size_t i;
+	char *d;
+	char *s;
 
-	if (!ft_strlen(needle))
-		return ((char *)haystack);
 	i = 0;
-	while (haystack[i])
+	d = dest;
+	s = (char *)src;
+	while (n-- > 0)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j])
-		{
-			if (!needle[j + 1])
-				return ((char *)&haystack[i]);
-			j++;
-		}
+		d[i] = s[i];
+		if (s[i] == c)
+			return (dest + i + 1);
 		i++;
 	}
 	return (NULL);
