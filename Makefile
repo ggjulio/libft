@@ -12,6 +12,10 @@ $(NAME): $(SRC)
 	@ranlib $(NAME)
 	@echo "Indexed";
 
+so:
+	@gcc -g -fPIC -Wall -Werror -Wextra -pedantic $(SRC) -shared -o libft.so;
+	@echo ".So created";
+
 clean:
 	@/bin/rm -f $(OBJ)
 	@echo ".o removed"

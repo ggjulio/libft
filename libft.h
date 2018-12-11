@@ -65,9 +65,9 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-//TODO
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
-
+//TODO
+ // ABS
 char	*ft_itoa(int n);
 char	*ft_strnew(size_t size);
 void	ft_strdel(char **as);
