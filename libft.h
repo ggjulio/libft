@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/08/13 20:09:51 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/08/14 00:23:20 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int		ft_isupper(int c);
 int		ft_islower(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strstr(const char *haystack, const char *needle);
