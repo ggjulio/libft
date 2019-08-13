@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
+/*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/06 22:06:33 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/08/13 20:04:10 by juligonz         ###   ########.fr       */
+/*   Created: 2019/08/13 16:57:49 by juligonz          #+#    #+#             */
+/*   Updated: 2019/08/13 16:57:49 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_islower(int c)
+char	*ft_strnew(size_t size)
 {
-	return (c >= 'a' && c <= 'z');
+	return (char *)ft_memalloc(sizeof(char) * (size + 1));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
+/*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/06 22:08:11 by jugonzal          #+#    #+#             */
-/*   Updated: 2018/08/06 22:08:11 by jugonzal         ###   ########.fr       */
+/*   Created: 2019/08/13 20:02:49 by juligonz          #+#    #+#             */
+/*   Updated: 2019/08/13 20:04:24 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 int		ft_isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return(0);
+	return (c >= 'A' && c <= 'Z');
 }

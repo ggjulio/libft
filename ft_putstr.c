@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
+/*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/31 15:34:42 by jugonzal          #+#    #+#             */
-/*   Updated: 2018/08/02 17:23:43 by jugonzal         ###   ########.fr       */
+/*   Created: 2019/08/13 16:14:15 by juligonz          #+#    #+#             */
+/*   Updated: 2019/08/13 16:14:16 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void  ft_putstr(char const *s)
 {
-  while (*s)
-    write(1, s++, 1);
+	write(1, s, ft_strlen(s));
 }

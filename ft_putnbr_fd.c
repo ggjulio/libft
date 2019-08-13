@@ -3,30 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
+/*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/02 21:01:25 by jugonzal          #+#    #+#             */
-/*   Updated: 2018/08/02 21:01:25 by jugonzal         ###   ########.fr       */
+/*   Created: 2019/08/13 19:46:41 by juligonz          #+#    #+#             */
+/*   Updated: 2019/08/13 19:46:42 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+static void	ft_putnbru_fd(unsigned int n, int *fd)
 {
-	long l;
-
-	l = (long)n;
-	if (l < 0)
-	{
-		l = -l;
-		ft_putchar_fd('-', fd);
-	}
-	if (l < 10)
-		ft_putchar_fd(l + '0', fd);
-	else if (l >= 10)
-	{
-		ft_putnbr_fd(l / 10, fd);
-		ft_putnbr_fd(l % 10, fd);
-	}
+	if (n >= 10)
+		ft_putnbru_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', *fd);
 }
+
+void		ft_putnbr_fd(int n, int fd)
+{
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbru_fd(-n, &fd);
+	}
+	else
+		ft_putnbru_fd(n, &fd);
+} 
