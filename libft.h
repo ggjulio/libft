@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/08/14 16:52:18 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/08/14 17:36:02 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,12 +91,16 @@ long int			ft_labs(long int n);
 void				ft_putnbr_base_fd(int n, unsigned int base, int fd);
 void				ft_putnbr_base(int n, unsigned int base);
 
+char				*ft_itoa_base(int n, unsigned int base);
+
 //TODO
+// CHECK ITOA and ITOA BASE neg int 
 /*
 print memory
 atoi base
 itoa base
 convert base
+strrev
 sort
 */
 
