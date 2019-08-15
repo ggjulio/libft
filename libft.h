@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/08/14 17:36:02 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/08/14 18:10:46 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strnew(size_t size);
 int					ft_atoi(const char *s);
-char				*ft_itoa(int n);
 
 void				ft_strdel(char **as);
 void				ft_strclr(char *s);
@@ -91,14 +90,32 @@ long int			ft_labs(long int n);
 void				ft_putnbr_base_fd(int n, unsigned int base, int fd);
 void				ft_putnbr_base(int n, unsigned int base);
 
-char				*ft_itoa_base(int n, unsigned int base);
-
-//TODO
+char				*ft_itoa(int n);
+char				*ft_itoa_base(int n, int base);
 // CHECK ITOA and ITOA BASE neg int 
-/*
+
+
+/*  TODO
+ft_iscntrl
+// better use pointer in fuction
+ft_str_is_alpha
+ft_str_is_lowercase
+ft_str_is_numeric
+ft_str_is_printable
+ft_str_is_uppercase
+
+ft_strcapitalize
+ft_strcasecmp
+ft_strcasestr
+ft_strlcpy
+ft_strlowcase
+ft_strncasecmp
+ft_strndup
+ft_strupcase
+ft_strtok
+
 print memory
 atoi base
-itoa base
 convert base
 strrev
 sort

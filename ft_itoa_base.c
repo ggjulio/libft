@@ -6,13 +6,13 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/14 17:06:19 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/14 17:46:00 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/08/14 17:58:22 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_size(int n, unsigned int base)
+static int	get_size(int n, int base)
 {
 	size_t res;
 
@@ -29,7 +29,7 @@ static int	get_size(int n, unsigned int base)
 	return (res);
 }
 
-char		*ft_itoa_base(int n, unsigned int base)
+char		*ft_itoa_base(int n, int base)
 {
 	int		size;
 	char	*res;
@@ -54,7 +54,7 @@ char		*ft_itoa_base(int n, unsigned int base)
 	}
 	if (res[0] == '-')
 		return (res);
-	res[0] = (n < 0 ? -n : n) % base + '0';
+	res[0] = (unsigned int)(n < 0 ? -n : n) % base + '0';
 	res[0] += (res[0] > '9' ? 39 : 0);
 	return (res);
 }
