@@ -6,13 +6,13 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/08/15 12:41:53 by juligonz         ###   ########.fr        #
+#    Updated: 2019/08/15 17:30:36 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
 
-SRC =	ft_abs.c				\
+SRCS =	ft_abs.c				\
 		ft_atoi.c				\
 		ft_bzero.c				\
 		ft_isalnum.c			\
@@ -65,18 +65,20 @@ SRC =	ft_abs.c				\
 		ft_toupper.c			\
 
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRCS:.c=.o)
+
+CFLAGS = -Wall -Wextra -Werror -I./includes
 
 all : $(NAME)
 
-$(NAME): $(SRC)
-	@gcc -Wall -Wextra -Werror -c $(SRC) && ar rc $(NAME) $(OBJ);
+$(NAME): $(SRCS)
+	@gcc $(CFLAGS) -c $(SRCS) && ar rc $(NAME) $(OBJ);
 	$(info Compiled)
 	@ranlib $(NAME)
 	$(info Indexed)
 
 so:
-	@gcc -g -fPIC -Wall -Werror -Wextra -pedantic $(SRC) -shared -o libft.so;
+	@gcc -g -fPIC $(CFLAGS) -pedantic $(SRCS) -shared -o libft.so;
 	$(info .So created)
 
 clean:
