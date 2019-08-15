@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/08/15 17:30:36 by juligonz         ###   ########.fr        #
+#    Updated: 2019/08/15 18:06:33 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -67,9 +67,9 @@ SRCS =	ft_abs.c				\
 
 OBJ = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -I./includes
+CFLAGS = -Wall -Wextra -Werror
 
-all : $(NAME)
+all: $(NAME)
 
 $(NAME): $(SRCS)
 	@gcc $(CFLAGS) -c $(SRCS) && ar rc $(NAME) $(OBJ);
