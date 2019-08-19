@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/08/14 18:10:46 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/08/15 18:16:25 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ ft_str_is_lowercase
 ft_str_is_numeric
 ft_str_is_printable
 ft_str_is_uppercase
-
 ft_strcapitalize
 ft_strcasecmp
 ft_strcasestr
@@ -114,6 +113,7 @@ ft_strndup
 ft_strupcase
 ft_strtok
 
+sqrt
 print memory
 atoi base
 convert base
