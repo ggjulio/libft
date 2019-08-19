@@ -67,32 +67,24 @@ SRCS =	ft_abs.c				\
 
 OBJ = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I./includes
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
-	@gcc $(CFLAGS) -c $(SRCS) && ar rc $(NAME) $(OBJ);
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
 	$(info Compiled)
 	@ranlib $(NAME)
 	$(info Indexed)
 
-so:
-	@gcc -g -fPIC $(CFLAGS) -pedantic $(SRCS) -shared -o libft.so;
-	$(info .So created)
-
 clean:
-	@/bin/rm -f $(OBJ)
+	@rm -f $(OBJ)
 	$(info .o removed !)
 
 fclean: clean
-	@/bin/rm -f $(NAME)
+	@rm -f $(NAME)
 	$(info lib removed !)
-
-aclean: clean
-	@find . -type f -name '*~' -delete
-	$(info temp files removed !)
 
 re: fclean all
 
-.PHONY: clean fclean re all aclean
+.PHONY: clean fclean re all
