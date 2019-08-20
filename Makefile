@@ -67,7 +67,7 @@ SRCS =	ft_abs.c				\
 
 OBJ = $(SRCS:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -I./includes
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
