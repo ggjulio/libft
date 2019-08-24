@@ -7,3 +7,5 @@ unit_test.c
 *.o
 libft.a
 libft.so
+\#*\#
+.\#*

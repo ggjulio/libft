@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/08/15 18:06:33 by juligonz         ###   ########.fr        #
+#    Updated: 2019/08/24 09:00:36 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -59,12 +59,21 @@ SRCS =	ft_abs.c			\
 	ft_strncmp.c			\
 	ft_strncpy.c			\
 	ft_strnew.c			\
+	ft_strdel.c			\
+	ft_strclr.c			\
+	ft_striter.c			\
+	ft_striteri.c			\
+	ft_strmap.c			\
+	ft_strmapi.c			\
+	ft_strequ.c			\
+	ft_strnequ.c			\
 	ft_strnstr.c			\
+	ft_strsub.c			\
+	ft_strjoin.c			\
 	ft_strrchr.c			\
 	ft_strstr.c			\
 	ft_tolower.c			\
-	ft_toupper.c			\
-
+	ft_toupper.c			
 
 OBJ = $(SRCS:.c=.o)
 
