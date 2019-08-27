@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/08/24 09:01:21 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/08/26 17:16:22 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct	s_list
 	void            *content;
 	size_t          content_size;
 	struct s_list   *next;
-}		t_list;
+}			t_list;
 
 void		ft_putchar(char c);
 void		ft_putstr(char const *s);
@@ -72,7 +72,6 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 char		*ft_strnew(size_t size);
 int			ft_atoi(const char *s);
 
-
 void		ft_strdel(char **as);
 void		ft_strclr(char *s);
 
@@ -80,15 +79,13 @@ void		ft_striter(char *s, void (*f)(char *));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int		ft_strequ(char const *s1, char const *s2);
-int		ft_strnequ(char const *s1, char const *s2, size_t n);
+int			ft_strequ(char const *s1, char const *s2);
+int			ft_strnequ(char const *s1, char const *s2, size_t n);
 
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
-/*
 char		*ft_strtrim(char const *s);
 char		**ft_strsplit(char const *s, char c);
-*/
 
 int 		ft_abs(int j);
 long int	ft_labs(long int n);
@@ -96,11 +93,13 @@ void		ft_putnbr_base_fd(int n, unsigned int base, int fd);
 void		ft_putnbr_base(int n, unsigned int base);
 char		*ft_itoa(int n);
 char		*ft_itoa_base(int n, int base);
+
 // CHECK ITOA and ITOA BASE neg int 
+
 
 /*  TODO
 ft_iscntrl
-// better use pointer in fuction
+// better use pointer in function
 ft_str_is_alpha
 ft_str_is_lowercase
 ft_str_is_numeric
@@ -127,7 +126,14 @@ sort
 
 //Bonus
 
-//Optionnels
+t_list	*ft_lstnew(void const *content, size_t content_size);
+void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+void ft_lstadd(t_list **alst, t_list *new);
+void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list * ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
+
+
 /*
 ft_lstnew
 ft_lstdelone
