@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/08/26 17:16:22 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/09/13 11:54:31 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int			ft_islower(int c);
 int			ft_isgraph(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
+int			ft_iscntrl(int c);
 
 void		*ft_memalloc(size_t size);
 void		ft_memdel(void **ap);
@@ -93,12 +94,13 @@ void		ft_putnbr_base_fd(int n, unsigned int base, int fd);
 void		ft_putnbr_base(int n, unsigned int base);
 char		*ft_itoa(int n);
 char		*ft_itoa_base(int n, int base);
+void		*ft_print_memory(void *addr, unsigned int size);
 
 // CHECK ITOA and ITOA BASE neg int 
 
 
+
 /*  TODO
-ft_iscntrl
 // better use pointer in function
 ft_str_is_alpha
 ft_str_is_lowercase
@@ -116,7 +118,6 @@ ft_strupcase
 ft_strtok
 
 sqrt
-print memory
 atoi base
 convert base
 strrev
@@ -128,6 +129,7 @@ sort
 
 t_list	*ft_lstnew(void const *content, size_t content_size);
 void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+
 void ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void ft_lstadd(t_list **alst, t_list *new);
 void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
@@ -135,13 +137,6 @@ t_list * ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
 
 
 /*
-ft_lstnew
-ft_lstdelone
-ft_lstdel
-ft_lstadd
-ft_lstiter
-ft_lstmap
-
 Si vous réussissez parfaitement la partie obligatoire et la partie bonus, vous êtes
 encouragés à ajouter d’autres fonctions qui vous paraissent utiles pour agrandir votre
 bibliothèque. Exemples : une version de ft_strsplit qui renvoie une liste de chaines au

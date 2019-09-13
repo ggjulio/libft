@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/08/26 16:07:13 by juligonz         ###   ########.fr        #
+#    Updated: 2019/09/13 11:54:53 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -18,6 +18,7 @@ SRCS =	ft_abs.c			\
 	ft_isalnum.c			\
 	ft_isalpha.c			\
 	ft_isascii.c			\
+	ft_iscntrl.c			\
 	ft_isdigit.c			\
 	ft_isgraph.c			\
 	ft_isblank.c			\
@@ -75,7 +76,10 @@ SRCS =	ft_abs.c			\
 	ft_strrchr.c			\
 	ft_strstr.c			\
 	ft_tolower.c			\
-	ft_toupper.c			
+	ft_toupper.c			\
+	ft_lstnew.c			\
+	ft_lstdelone.c			\
+	ft_print_memory.c	
 
 OBJ = $(SRCS:.c=.o)
 
