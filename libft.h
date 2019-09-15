@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/09/13 11:54:31 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/09/15 09:09:22 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,13 +127,13 @@ sort
 
 //Bonus
 
-t_list	*ft_lstnew(void const *content, size_t content_size);
-void ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstadd(t_list **alst, t_list *new);
+t_list		*ft_lstnew(void const *content, size_t content_size);
+void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
+t_list		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
+void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
-void ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void ft_lstadd(t_list **alst, t_list *new);
-void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list * ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem));
 
 
 /*
