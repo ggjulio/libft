@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/09/15 09:09:22 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/09/29 09:09:08 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,12 +96,7 @@ char		*ft_itoa(int n);
 char		*ft_itoa_base(int n, int base);
 void		*ft_print_memory(void *addr, unsigned int size);
 
-// CHECK ITOA and ITOA BASE neg int 
-
-
-
 /*  TODO
-// better use pointer in function
 ft_str_is_alpha
 ft_str_is_lowercase
 ft_str_is_numeric
