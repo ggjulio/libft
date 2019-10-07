@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/24 09:28:40 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/26 14:52:16 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/07 12:16:49 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char			*ft_strtrim(char const *s)
 	char	*res;
 
 	start = 0;
-	while(s[start] && ft_isblank_nl(s[start]))
+	while (s[start] && ft_isblank_nl(s[start]))
 		start++;
 	if (!s[start])
 		return (ft_strcpy(ft_strnew(0), ""));

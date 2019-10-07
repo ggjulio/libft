@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 20:26:43 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/23 08:09:30 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/07 20:27:48 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	size_t i;
-	char *d;
-	char *s;
+	size_t	i;
+	char	*d;
+	char	*s;
 
 	i = 0;
 	d = dest;

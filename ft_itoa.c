@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/14 10:16:25 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/14 13:32:56 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/07 12:15:37 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ char		*ft_itoa(int n)
 	char	*res;
 
 	size = get_size(n);
-	if(!(res = (char *)malloc(sizeof(char) * (size + 1))))
+	if (!(res = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	if (n < 0)
 	{
-		res[0] = '-';		
+		res[0] = '-';
 		res[size--] = '\0';
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 09:42:02 by juligonz          #+#    #+#             */
-/*   Updated: 2019/09/13 11:44:46 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/07 18:35:53 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 			free(new);
 			return (NULL);
 		}
-		ft_memcpy(new->content, content, content_size);	
+		ft_memcpy(new->content, content, content_size);
 		new->content_size = content_size;
 	}
 	new->next = NULL;
