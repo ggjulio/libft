@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/08 18:57:56 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/08 19:48:45 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -31,7 +31,6 @@ SRCS =	ft_abs.c			\
 	ft_itoa.c			\
 	ft_labs.c			\
 	ft_llabs.c			\
-	ft_memalloc.c			\
 	ft_memccpy.c			\
 	ft_memchr.c			\
 	ft_memcmp.c			\

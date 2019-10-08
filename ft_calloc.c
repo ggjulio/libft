@@ -6,7 +6,7 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 16:30:55 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/08 17:28:19 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 19:46:08 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*ptr;
 
 	size *= count;
-	ptr = malloc(size);
+	if (!(ptr = malloc(size)))
+		return (NULL);
 	ft_memset(ptr, 0, size);
 	return (ptr);
 }
