@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/26 14:56:24 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/26 16:50:12 by juligonz         ###   ########.fr       */
+/*   Created: 2019/10/08 18:57:27 by juligonz          #+#    #+#             */
+/*   Updated: 2019/10/08 18:57:29 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static char		*ft_strdup_to_char(const char *src, char c)
 	return (s);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	j;

@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/08 17:39:46 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/08 18:57:56 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -69,10 +69,10 @@ SRCS =	ft_abs.c			\
 	ft_strequ.c			\
 	ft_strnequ.c			\
 	ft_strnstr.c			\
-	ft_strsub.c			\
+	ft_substr.c			\
 	ft_strjoin.c			\
 	ft_strtrim.c			\
-	ft_strsplit.c			\
+	ft_split.c			\
 	ft_strrchr.c			\
 	ft_strstr.c			\
 	ft_tolower.c			\

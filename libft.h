@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/10/08 18:52:51 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 18:58:30 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
-char			**ft_strsplit(char const *s, char c);
+char			**ft_split(char const *s, char c);
 
 int				ft_abs(int j);
 long int		ft_labs(long int n);
