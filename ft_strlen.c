@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 16:33:22 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/13 16:33:32 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 09:11:00 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-  size_t i;
+	size_t	i;
 
-  i = 0;
-  while (s[i])
-    i++;
-  return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/14 17:06:19 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/14 17:58:22 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/07 21:31:45 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,13 @@ char		*ft_itoa_base(int n, int base)
 	char	*res;
 
 	if (base < 2 || base > 16)
-		return (NULL);	
+		return (NULL);
 	size = get_size(n, base);
-	if(!(res = (char *)malloc(sizeof(char) * (size + 1))))
+	if (!(res = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	if (n < 0)
-	{
-		res[0] = '-';		
-		res[size--] = '\0';
-	}
-	else
-		res[size--] = '\0';
+		res[0] = '-';
+	res[size--] = '\0';
 	while (size > 0)
 	{
 		res[size--] = (unsigned int)(n < 0 ? -n : n) % base + '0';

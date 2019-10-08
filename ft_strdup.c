@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 20:23:46 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/13 20:23:47 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 09:08:39 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t i;
-	char *res;
+	size_t	i;
+	char	*res;
 
 	if (!(res = malloc(sizeof(char) * ft_strlen(s) + 1)))
 		return (NULL);

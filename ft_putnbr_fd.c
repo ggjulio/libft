@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 19:46:41 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/13 19:46:42 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 09:09:51 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ void		ft_putnbr_fd(int n, int fd)
 	}
 	else
 		ft_putnbru_fd(n, &fd);
-} 
+}

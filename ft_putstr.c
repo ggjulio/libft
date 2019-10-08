@@ -6,13 +6,13 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 16:14:15 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/13 16:14:16 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 09:06:33 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void  ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
 	write(1, s, ft_strlen(s));
 }

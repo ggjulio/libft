@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/24 07:52:07 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/24 08:25:34 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 09:13:21 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 {
 	size_t	i;
 	char	*res;
-	
+
 	if (!(res = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	i = 0;
