@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/09/15 14:20:37 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/08 17:39:46 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -83,7 +83,10 @@ SRCS =	ft_abs.c			\
 	ft_lstadd.c			\
 	ft_lstiter.c			\
 	ft_lstmap.c			\
-	ft_print_memory.c	
+	ft_print_memory.c	\
+	ft_calloc.c			\
+	ft_strlcpy.c			\
+
 
 OBJ = $(SRCS:.c=.o)
 
