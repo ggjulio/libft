@@ -6,13 +6,13 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/24 08:37:48 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/24 08:52:04 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/08 18:52:12 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*res;
