@@ -6,7 +6,7 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 18:57:27 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/08 18:57:29 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/09 14:20:28 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ static char		*ft_strdup_to_char(const char *src, char c)
 		word_len++;
 		i++;
 	}
-	s = malloc(sizeof(*s) * (word_len + 1));
+	if (!(s = malloc(sizeof(*s) * (word_len + 1))))
+		return (NULL);
 	i = 0;
 	while (src[i] && src[i] != c)
 	{
