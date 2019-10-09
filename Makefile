@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/09 18:46:09 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/09 22:15:51 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -95,16 +95,12 @@ ADDITIONNAL = ft_abs.c			\
 
 
 SRCS = $(PART1) $(PART2)
-
-SRCS_B = $(PART1) $(PART2) $(BONUS)
-
-SRCS_ADD = $(PART1) $(PART2) $(BONUS) $(ADDITIONNAL)
+SRCS_BONUS = $(BONUS)
+SRCS_ADD = $(ADDITIONNAL)
 
 OBJ = $(SRCS:.c=.o)
-
 OBJ_BONUS = $(OBJ) $(SRCS_BONUS:.c=.o)
-
-OBJ_ADD = $(OBJ) $(SRCS_BONUS:.c=.o)
+OBJ_ADD = $(OBJ_BONUS) $(SRCS_ADD:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -117,18 +113,12 @@ $(NAME): $(OBJ)
 	$(info Indexed)
 
 clean:
-	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD)
+	@rm -f $(OBJ_ADD) 
 	$(info .o removed !)
 
 fclean: clean
 	@rm -f $(NAME)
 	$(info lib removed !)
-
-bonus: $(OBJ) $(OBJ_BONUS)
-	@ar rc $(NAME) $(OBJ) $(OBJ_BONUS)
-    $(info Compiled)
-    @ranlib $(NAME)
-    $(info Indexed)
 
 re: fclean all
 

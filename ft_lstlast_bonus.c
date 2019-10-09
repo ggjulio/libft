@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 20:23:46 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/09 22:19:17 by juligonz         ###   ########.fr       */
+/*   Created: 2019/10/09 19:42:08 by juligonz          #+#    #+#             */
+/*   Updated: 2019/10/09 19:46:32 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "libft_bonus.h"
 
-char	*ft_strdup(const char *s)
+t_list		*ft_lstlast(t_list *lst)
 {
-	size_t	i;
-	char	*res;
-
-	if (!(res = malloc(sizeof(char) * ft_strlen(s) + 1)))
-		return (NULL);
-	i = -1;
-	while (s[++i])
-		res[i] = s[i];
-	res[i] = '\0';
-	return (res);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

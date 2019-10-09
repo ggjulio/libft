@@ -6,11 +6,12 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/14 10:16:25 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/07 12:15:37 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/09 22:20:51 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	get_size(int n)
 {

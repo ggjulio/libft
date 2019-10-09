@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 20:23:46 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/09 22:19:17 by juligonz         ###   ########.fr       */
+/*   Created: 2019/10/09 19:12:10 by juligonz          #+#    #+#             */
+/*   Updated: 2019/10/09 21:21:39 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdlib.h>
+#include "libft_bonus.h"
 
-char	*ft_strdup(const char *s)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	size_t	i;
-	char	*res;
-
-	if (!(res = malloc(sizeof(char) * ft_strlen(s) + 1)))
-		return (NULL);
-	i = -1;
-	while (s[++i])
-		res[i] = s[i];
-	res[i] = '\0';
-	return (res);
+	new->next = *alst;
+	*alst = new;
 }
