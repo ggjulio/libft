@@ -6,7 +6,7 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 19:47:02 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/09 19:56:43 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/09 22:42:17 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
-	free(*lst);
+	free(lst);
 }

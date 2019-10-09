@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/09 22:15:51 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/09 22:42:56 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -99,26 +99,32 @@ SRCS_BONUS = $(BONUS)
 SRCS_ADD = $(ADDITIONNAL)
 
 OBJ = $(SRCS:.c=.o)
-OBJ_BONUS = $(OBJ) $(SRCS_BONUS:.c=.o)
-OBJ_ADD = $(OBJ_BONUS) $(SRCS_ADD:.c=.o)
+OBJ_BONUS = $(SRCS_BONUS:.c=.o)
+OBJ_ADD = $(SRCS_ADD:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(OBJ_ADD)
+	@ar rc $(NAME) $(OBJ) $(OBJ_ADD)
 	$(info Compiled)
 	@ranlib $(NAME)
 	$(info Indexed)
 
 clean:
-	@rm -f $(OBJ_ADD) 
+	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
 	$(info .o removed !)
 
 fclean: clean
 	@rm -f $(NAME)
 	$(info lib removed !)
+
+bonus: $(OBJ_BONUS)
+	@ar rc $(NAME) $(OBJ_BONUS)
+	$(info Compiled)
+	@ranlib $(NAME)
+    $(info Indexed)
 
 re: fclean all
 

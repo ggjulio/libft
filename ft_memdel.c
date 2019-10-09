@@ -6,11 +6,11 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 20:12:26 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/13 20:13:41 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/09 22:40:08 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

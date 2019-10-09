@@ -6,11 +6,11 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/24 07:20:16 by juligonz          #+#    #+#             */
-/*   Updated: 2019/08/24 07:30:02 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/09 22:40:45 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 void	ft_strdel(char **as)
 {
