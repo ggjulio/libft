@@ -6,13 +6,11 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/10 13:56:08 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/10 21:53:21 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
-NAME_BONUS = libft_bonus.a
-
 
 PART1 =	ft_memset.c				\
 		ft_bzero.c				\
@@ -112,21 +110,16 @@ $(NAME): $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
 	$(info Compiled $(NAME))
 	@ranlib $(NAME)
 
-$(NAME_BONUS): $(OBJ_BONUS)
-	@ar rc $(NAME_BONUS) $(OBJ_BONUS)
-	$(info Compiled $(NAME_BONUS))
-	@ranlib $(NAME_BONUS)
-
 clean:
 	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
 	$(info .o removed !)
 
 fclean: clean
-	@rm -f $(NAME) $(NAME_BONUS)
-	$(info libs removed !)
+	@rm -f $(NAME)
+	$(info lib removed !)
 
-bonus: $(NAME_BONUS)
+bonus: $(NAME)
 
 re: fclean all
 
-.PHONY: clean fclean re all bonus 
+.PHONY: clean fclean re all bonus
