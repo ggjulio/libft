@@ -6,11 +6,11 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 21:15:30 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/09 21:20:09 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/10 13:43:35 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(void *))
 {

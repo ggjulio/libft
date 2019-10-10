@@ -6,11 +6,11 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 19:36:02 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/09 21:22:34 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/10 13:41:35 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 int		ft_lstsize(t_list *lst)
 {

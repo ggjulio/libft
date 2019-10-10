@@ -6,11 +6,11 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 21:10:44 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/09 21:11:38 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/10 13:43:23 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

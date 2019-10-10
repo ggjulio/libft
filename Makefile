@@ -6,11 +6,12 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/09 22:42:56 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/10 13:44:38 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
 NAME = libft.a
+NAME_BONUS = libft_bonus.a
 
 
 PART1 =	ft_memset.c				\
@@ -104,28 +105,30 @@ OBJ_ADD = $(SRCS_ADD:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
-all: $(NAME)
+all: $(NAME) $(NAME_BONUS)
 
-$(NAME): $(OBJ) $(OBJ_ADD)
-	@ar rc $(NAME) $(OBJ) $(OBJ_ADD)
-	$(info Compiled)
+$(NAME): $(OBJ)
+	@ar rc $(NAME) $(OBJ)
+	$(info Compiled $(NAME))
 	@ranlib $(NAME)
 	$(info Indexed)
+
+$(NAME_BONUS): $(OBJ_BONUS)
+	@ar rc $(NAME_BONUS) $(OBJ_BONUS) 
+	$(info Compiled $(NAME_BONUS))
+	@ranlib $(NAME_BONUS)
+    $(info Indexed)
 
 clean:
 	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
 	$(info .o removed !)
 
 fclean: clean
-	@rm -f $(NAME)
+	@rm -f $(NAME) $(NAME_BONUS)
 	$(info lib removed !)
 
-bonus: $(OBJ_BONUS)
-	@ar rc $(NAME) $(OBJ_BONUS)
-	$(info Compiled)
-	@ranlib $(NAME)
-    $(info Indexed)
+bonus: $(NAME_BONUS)
 
 re: fclean all
 
-.PHONY: clean fclean re all bonus
+.PHONY: clean fclean re all bonus 

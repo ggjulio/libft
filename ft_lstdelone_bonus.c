@@ -6,14 +6,15 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 19:47:02 by juligonz          #+#    #+#             */
-/*   Updated: 2019/10/09 22:42:17 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/10 13:42:22 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
 	free(lst);
+	lst = NULL;
 }
