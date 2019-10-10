@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/10 13:44:38 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/10 13:56:08 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -107,17 +107,15 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME) $(NAME_BONUS)
 
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
+	@ar rc $(NAME) $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
 	$(info Compiled $(NAME))
 	@ranlib $(NAME)
-	$(info Indexed)
 
 $(NAME_BONUS): $(OBJ_BONUS)
-	@ar rc $(NAME_BONUS) $(OBJ_BONUS) 
+	@ar rc $(NAME_BONUS) $(OBJ_BONUS)
 	$(info Compiled $(NAME_BONUS))
 	@ranlib $(NAME_BONUS)
-    $(info Indexed)
 
 clean:
 	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
@@ -125,7 +123,7 @@ clean:
 
 fclean: clean
 	@rm -f $(NAME) $(NAME_BONUS)
-	$(info lib removed !)
+	$(info libs removed !)
 
 bonus: $(NAME_BONUS)
 
