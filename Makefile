@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/10 21:53:21 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/20 10:07:45 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -48,15 +48,15 @@ PART2 =	ft_substr.c				\
 		ft_putendl_fd.c			\
 		ft_putnbr_fd.c			\
 
-BONUS = ft_lstnew_bonus.c		\
-		ft_lstadd_front_bonus.c \
-		ft_lstsize_bonus.c		\
-		ft_lstlast_bonus.c		\
-		ft_lstadd_back_bonus.c	\
-		ft_lstdelone_bonus.c	\
-		ft_lstclear_bonus.c		\
-		ft_lstiter_bonus.c		\
-		ft_lstmap_bonus.c		\
+BONUS = ft_lstnew.c				\
+		ft_lstadd_front.c		\
+		ft_lstsize.c			\
+		ft_lstlast.c			\
+		ft_lstadd_back.c		\
+		ft_lstdelone.c			\
+		ft_lstclear.c			\
+		ft_lstiter.c			\
+		ft_lstmap.c				\
 
 ADDITIONNAL = ft_abs.c			\
 		ft_iscntrl.c			\
