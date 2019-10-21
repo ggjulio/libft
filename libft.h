@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/10/11 18:40:35 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/10/21 11:06:20 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,7 @@ long int		ft_labs(long int n);
 void			ft_putnbr_base_fd(int n, unsigned int base, int fd);
 void			ft_putnbr_base(int n, unsigned int base);
 char			*ft_itoa_base(int n, int base);
+char			*ft_strndup(const char *s, size_t n);
 void			*ft_print_memory(void *addr, unsigned int size);
 
 #endif

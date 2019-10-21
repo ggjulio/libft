@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/20 10:07:45 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/21 11:05:27 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -90,6 +90,7 @@ ADDITIONNAL = ft_abs.c			\
 		ft_strequ.c				\
 		ft_strnequ.c			\
 		ft_strstr.c				\
+		ft_strndup.c			\
 		ft_print_memory.c		\
 
 
