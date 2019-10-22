@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/21 11:05:27 by juligonz         ###   ########.fr        #
+#    Updated: 2019/10/22 15:40:46 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -107,9 +107,8 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME) $(NAME_BONUS)
 
 $(NAME): $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
-	@ar rc $(NAME) $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
+	@ar rcs $(NAME) $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
 	$(info Compiled $(NAME))
-	@ranlib $(NAME)
 
 clean:
 	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
