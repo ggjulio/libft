@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2019/10/21 11:06:20 by juligonz         ###   ########.fr       */
+/*   Updated: 2019/12/14 18:09:37 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
 
 typedef struct	s_list
 {
@@ -102,5 +103,29 @@ void			ft_putnbr_base(int n, unsigned int base);
 char			*ft_itoa_base(int n, int base);
 char			*ft_strndup(const char *s, size_t n);
 void			*ft_print_memory(void *addr, unsigned int size);
+
+/*
+**	Get_next_line
+*/
+
+int				get_next_line(int fd, char **line);
+
+/*
+**	printf
+*/
+
+int				ft_printf(
+	const char *format, ...) __attribute__((format(printf,1,2)));
+int				ft_dprintf(
+	int fd, const char *format, ...) __attribute__((format(printf,2,3)));
+int				ft_sprintf(
+	char *str, const char *format, ...) __attribute__((format(printf,2,3)));
+int				ft_asprintf(
+	char **ret, const char *format, ...) __attribute__((format(printf,2,3)));
+
+int				ft_vprintf(const char *format, va_list ap);
+int				ft_vdprintf(int fd, const char *format, ...);
+int				ft_vsprintf(char *dst, const char *format, va_list ap);
+int				ft_vasprintf(char **ret, const char *format, va_list ap);
 
 #endif

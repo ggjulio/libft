@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2019/10/22 15:40:46 by juligonz         ###   ########.fr        #
+#    Updated: 2019/12/14 18:17:04 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -93,16 +93,54 @@ ADDITIONNAL = ft_abs.c			\
 		ft_strndup.c			\
 		ft_print_memory.c		\
 
+FT_PRINTF =  ft_printf/srcs/ft_printf.c			  \
+        ft_printf/srcs/ft_dprintf.c               \
+        ft_printf/srcs/ft_sprintf.c               \
+        ft_printf/srcs/ft_asprintf.c              \
+        ft_printf/srcs/ft_strdup_cat.c            \
+        ft_printf/srcs/cast_len_modifier.c        \
+        ft_printf/srcs/read_flags.c               \
+        ft_printf/srcs/parse.c                    \
+        ft_printf/srcs/double_utils.c             \
+        ft_printf/srcs/double_utils_2.c           \
+        ft_printf/srcs/double_validation.c        \
+        ft_printf/srcs/write_buffer.c             \
+        ft_printf/srcs/lib/ft_strlen.c            \
+        ft_printf/srcs/lib/ft_strncpy.c           \
+        ft_printf/srcs/lib/ft_isdigit.c           \
+        ft_printf/srcs/lib/ft_memset.c            \
+        ft_printf/srcs/put/put_dec.c              \
+        ft_printf/srcs/put/put_hex.c              \
+        ft_printf/srcs/put/put_oct.c              \
+        ft_printf/srcs/put/put_ptr.c              \
+        ft_printf/srcs/put/put_double.c           \
+        ft_printf/srcs/put/put_e.c                \
+        ft_printf/srcs/put/put_g.c                \
+        ft_printf/srcs/convs/conv_c.c             \
+        ft_printf/srcs/convs/conv_s.c             \
+        ft_printf/srcs/convs/conv_p.c             \
+        ft_printf/srcs/convs/conv_d.c             \
+        ft_printf/srcs/convs/conv_i.c             \
+        ft_printf/srcs/convs/conv_u.c             \
+        ft_printf/srcs/convs/conv_x_lowcase.c     \
+        ft_printf/srcs/convs/conv_x_upcase.c      \
+        ft_printf/srcs/convs/conv_n.c             \
+        ft_printf/srcs/convs/conv_f.c             \
+        ft_printf/srcs/convs/conv_g.c             \
+        ft_printf/srcs/convs/conv_e.c             \
+        ft_printf/srcs/convs/conv_o.c             \
+        ft_printf/srcs/convs/conv_mod.c           \
+
 
 SRCS = $(PART1) $(PART2)
 SRCS_BONUS = $(BONUS)
-SRCS_ADD = $(ADDITIONNAL)
+SRCS_ADD = $(ADDITIONNAL) $(FT_PRINTF)
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(SRCS_BONUS:.c=.o)
 OBJ_ADD = $(SRCS_ADD:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I./ft_printf/includes
 
 all: $(NAME) $(NAME_BONUS)
 
