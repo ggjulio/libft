@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2020/01/23 15:40:59 by juligonz         ###   ########.fr        #
+#    Updated: 2020/01/27 17:51:57 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -93,6 +93,7 @@ ADDITIONNAL = ft_abs.c			\
 		ft_strndup.c			\
 		ft_print_memory.c		\
 		gnl/get_next_line.c		\
+		ft_valid_extention.c	\
 
 FT_PRINTF =  ft_printf/srcs/ft_printf.c			  \
         ft_printf/srcs/ft_dprintf.c               \

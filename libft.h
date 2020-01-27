@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2020/01/23 15:50:13 by juligonz         ###   ########.fr       */
+/*   Updated: 2020/01/27 17:54:19 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,7 @@ void			ft_putnbr_base(int n, unsigned int base);
 char			*ft_itoa_base(int n, int base);
 char			*ft_strndup(const char *s, size_t n);
 void			*ft_print_memory(void *addr, unsigned int size);
+
+int				ft_valid_extention(char *filename, char *extention);
 
 #endif
