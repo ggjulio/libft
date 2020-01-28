@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2020/01/27 17:51:57 by juligonz         ###   ########.fr        #
+#    Updated: 2020/01/28 14:47:48 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -142,7 +142,7 @@ OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(SRCS_BONUS:.c=.o)
 OBJ_ADD = $(SRCS_ADD:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -I./ft_printf/includes
+CFLAGS = -Wall -Wextra -Werror -I./ft_printf/includes -g
 
 all: $(NAME) $(NAME_BONUS)
 
