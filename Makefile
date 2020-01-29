@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2020/01/28 21:43:47 by juligonz         ###   ########.fr        #
+#    Updated: 2020/01/29 19:41:13 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -147,12 +147,18 @@ CFLAGS = -Wall -Wextra -Werror -I./ft_printf/includes -g
 
 all: $(NAME) $(NAME_BONUS)
 
+libs:
+	@make -s -C ft_printf/
+	@mv ft_printf/libftprintf.a ./$(NAME)
+
 $(NAME): $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
+	@make libs
 	@ar rcs $(NAME) $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
 	$(info Compiled $(NAME))
 
 clean:
 	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
+	@make clean -s -C ft_printf/
 	$(info .o removed !)
 
 fclean: clean
