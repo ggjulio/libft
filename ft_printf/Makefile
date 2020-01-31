@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/22 14:58:05 by juligonz          #+#    #+#              #
-#    Updated: 2020/01/29 19:30:06 by juligonz         ###   ########.fr        #
+#    Updated: 2020/01/31 15:15:47 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -24,8 +24,8 @@ SRCS =	srcs/ft_printf.c 				\
 		srcs/double_utils_2.c			\
 		srcs/double_validation.c		\
 		srcs/write_buffer.c				\
-		../ft_strlen.c					\
 		../ft_strncpy.c					\
+		../ft_strlen.c					\
 		../ft_isdigit.c					\
 		../ft_memset.c					\
 		srcs/put/put_dec.c				\

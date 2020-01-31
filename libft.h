@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2020/01/29 18:53:44 by juligonz         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:22:30 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ char			*ft_strndup(const char *s, size_t n);
 void			*ft_print_memory(void *addr, unsigned int size);
 
 int				ft_valid_extention(char *filename, char *extention);
-int				in_charset(char c, const char *charset);
+int				ft_in_charset(char c, const char *charset);
+int				ft_isnumber(char *s);
 
 #endif

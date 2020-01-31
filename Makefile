@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2020/01/29 19:41:13 by juligonz         ###   ########.fr        #
+#    Updated: 2020/01/31 15:23:21 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -94,9 +94,10 @@ ADDITIONNAL = ft_abs.c			\
 		ft_print_memory.c		\
 		gnl/get_next_line.c		\
 		ft_valid_extention.c	\
-		in_charset.c			\
+		ft_in_charset.c			\
+		ft_isnumber.c			\
 
-FT_PRINTF =  ft_printf/srcs/ft_printf.c			  \
+#FT_PRINTF =  ft_printf/srcs/ft_printf.c			  \
         ft_printf/srcs/ft_dprintf.c               \
         ft_printf/srcs/ft_sprintf.c               \
         ft_printf/srcs/ft_asprintf.c              \
@@ -109,7 +110,7 @@ FT_PRINTF =  ft_printf/srcs/ft_printf.c			  \
         ft_printf/srcs/double_validation.c        \
         ft_printf/srcs/write_buffer.c             \
         ft_printf/srcs/lib/ft_strlen.c            \
-        ft_printf/srcs/lib/ft_strncpy.c           \
+       ft_printf/srcs/lib/ft_strncpy.c           \
         ft_printf/srcs/lib/ft_isdigit.c           \
         ft_printf/srcs/lib/ft_memset.c            \
         ft_printf/srcs/put/put_dec.c              \
@@ -137,13 +138,13 @@ FT_PRINTF =  ft_printf/srcs/ft_printf.c			  \
 
 SRCS = $(PART1) $(PART2)
 SRCS_BONUS = $(BONUS)
-SRCS_ADD = $(ADDITIONNAL) $(FT_PRINTF)
+SRCS_ADD = $(ADDITIONNAL)		#$(FT_PRINTF)
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(SRCS_BONUS:.c=.o)
 OBJ_ADD = $(SRCS_ADD:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -I./ft_printf/includes -g
+CFLAGS = -Wall -Wextra -Werror -g #-I./ft_printf/includes
 
 all: $(NAME) $(NAME_BONUS)
 
