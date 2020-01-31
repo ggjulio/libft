@@ -6,7 +6,7 @@
 /*   By: juligonz <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 15:59:07 by juligonz          #+#    #+#             */
-/*   Updated: 2019/12/12 17:36:02 by juligonz         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:48:57 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ static int	primary_flags(t_manager *p, const char *format, size_t *i)
 
 static int	width(t_manager *p, const char *format, size_t *i, va_list args)
 {
-	if (is_digit(format[*i]))
-		while (is_digit(format[*i]))
+	if (ft_isdigit(format[*i]))
+		while (ft_isdigit(format[*i]))
 			p->width = (p->width * 10) + format[(*i)++] - '0';
 	else if (format[*i] == '*' && ++(*i))
 	{
@@ -87,7 +87,7 @@ static int	preci(t_manager *p, const char *format, size_t *i, va_list args)
 		if (format[*i] == '*' && ++(*i))
 			p->precision = va_arg(args, int);
 		else
-			while (is_digit(format[*i]))
+			while (ft_isdigit(format[*i]))
 				p->precision = (p->precision * 10) + format[(*i)++] - '0';
 		if (p->precision < 0)
 			p->f.dot = 0;

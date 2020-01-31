@@ -6,7 +6,7 @@
 /*   By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 15:53:56 by juligonz          #+#    #+#             */
-/*   Updated: 2019/12/13 17:32:21 by juligonz         ###   ########.fr       */
+/*   Updated: 2020/01/31 15:46:31 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdint.h>
 # include <wchar.h>
 # include <float.h>
+# include "libft.h"
 
 # define BUFFER_SIZE 64
 
@@ -118,11 +119,7 @@ wchar_t			*cast_s(t_manager *p, va_list args);
 ** ******************* Utility  ********************
 */
 
-size_t			ft_strlen(const char *s);
 char			*ft_strdup_cat(char *src, char *buf, int src_len, int buf_len);
-char			*ft_strncpy(char *dest, const char *src, size_t n);
-void			*ft_memset(void *s, int c, size_t n);
-int				is_digit(char c);
 void			write_buffer(t_manager *p, void *s, size_t n);
 void			write_buffer_wcs(t_manager *p, wchar_t *s, size_t n);
 void			flush_buffer(t_manager *p);
