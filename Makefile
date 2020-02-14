@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2020/02/14 11:33:40 by juligonz         ###   ########.fr        #
+#    Updated: 2020/02/14 11:40:08 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -119,16 +119,18 @@ $(NAME): $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
 	@ar rcs $(NAME) $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
 	$(info Compiled $(NAME))
 
+debug:
+	@gcc main.c -L./ -lft -o $@
+
 clean:
 	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
 	@make clean -s -C ft_printf/
 	$(info .o removed !)
 
-debug:
-	@gcc main.c -L./ -lft -o $@
-
 fclean: clean
+	@rm -f debug	
 	@rm -f $(NAME)
+	$(info debug removed !)
 	$(info lib removed !)
 
 bonus: $(NAME)
