@@ -6,7 +6,7 @@
 /*   By: jugonzal <gonzalez.julio89@hotmail.fr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 01:58:46 by jugonzal          #+#    #+#             */
-/*   Updated: 2020/01/31 15:49:27 by juligonz         ###   ########.fr       */
+/*   Updated: 2020/02/14 11:31:16 by juligonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ void			ft_lstdelone(t_list *lst, void (*del)(void*));
 void			ft_lstclear(t_list **lst, void (*del)(void*));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void*));
+
+void			*ft_lstpop_front(t_list **lst);
 
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);

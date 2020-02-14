@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2020/01/31 15:23:21 by juligonz         ###   ########.fr        #
+#    Updated: 2020/02/14 11:33:40 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -96,55 +96,17 @@ ADDITIONNAL = ft_abs.c			\
 		ft_valid_extention.c	\
 		ft_in_charset.c			\
 		ft_isnumber.c			\
-
-#FT_PRINTF =  ft_printf/srcs/ft_printf.c			  \
-        ft_printf/srcs/ft_dprintf.c               \
-        ft_printf/srcs/ft_sprintf.c               \
-        ft_printf/srcs/ft_asprintf.c              \
-        ft_printf/srcs/ft_strdup_cat.c            \
-        ft_printf/srcs/cast_len_modifier.c        \
-        ft_printf/srcs/read_flags.c               \
-        ft_printf/srcs/parse.c                    \
-        ft_printf/srcs/double_utils.c             \
-        ft_printf/srcs/double_utils_2.c           \
-        ft_printf/srcs/double_validation.c        \
-        ft_printf/srcs/write_buffer.c             \
-        ft_printf/srcs/lib/ft_strlen.c            \
-       ft_printf/srcs/lib/ft_strncpy.c           \
-        ft_printf/srcs/lib/ft_isdigit.c           \
-        ft_printf/srcs/lib/ft_memset.c            \
-        ft_printf/srcs/put/put_dec.c              \
-        ft_printf/srcs/put/put_hex.c              \
-        ft_printf/srcs/put/put_oct.c              \
-        ft_printf/srcs/put/put_ptr.c              \
-        ft_printf/srcs/put/put_double.c           \
-        ft_printf/srcs/put/put_e.c                \
-        ft_printf/srcs/put/put_g.c                \
-        ft_printf/srcs/convs/conv_c.c             \
-        ft_printf/srcs/convs/conv_s.c             \
-        ft_printf/srcs/convs/conv_p.c             \
-        ft_printf/srcs/convs/conv_d.c             \
-        ft_printf/srcs/convs/conv_i.c             \
-        ft_printf/srcs/convs/conv_u.c             \
-        ft_printf/srcs/convs/conv_x_lowcase.c     \
-        ft_printf/srcs/convs/conv_x_upcase.c      \
-        ft_printf/srcs/convs/conv_n.c             \
-        ft_printf/srcs/convs/conv_f.c             \
-        ft_printf/srcs/convs/conv_g.c             \
-        ft_printf/srcs/convs/conv_e.c             \
-        ft_printf/srcs/convs/conv_o.c             \
-        ft_printf/srcs/convs/conv_mod.c           \
-
+		ft_lstpop_front.c		\
 
 SRCS = $(PART1) $(PART2)
 SRCS_BONUS = $(BONUS)
-SRCS_ADD = $(ADDITIONNAL)		#$(FT_PRINTF)
+SRCS_ADD = $(ADDITIONNAL)
 
 OBJ = $(SRCS:.c=.o)
 OBJ_BONUS = $(SRCS_BONUS:.c=.o)
 OBJ_ADD = $(SRCS_ADD:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -g #-I./ft_printf/includes
+CFLAGS = -Wall -Wextra -Werror -g
 
 all: $(NAME) $(NAME_BONUS)
 
@@ -161,6 +123,9 @@ clean:
 	@rm -f $(OBJ) $(OBJ_BONUS) $(OBJ_ADD) 
 	@make clean -s -C ft_printf/
 	$(info .o removed !)
+
+debug:
+	@gcc main.c -L./ -lft -o $@
 
 fclean: clean
 	@rm -f $(NAME)
