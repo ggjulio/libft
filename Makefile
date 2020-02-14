@@ -6,7 +6,7 @@
 #    By: juligonz <juligonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/15 12:07:06 by juligonz          #+#    #+#              #
-#    Updated: 2020/02/14 11:40:08 by juligonz         ###   ########.fr        #
+#    Updated: 2020/02/14 11:46:18 by juligonz         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -120,6 +120,7 @@ $(NAME): $(OBJ) $(OBJ_ADD) $(OBJ_BONUS)
 	$(info Compiled $(NAME))
 
 debug:
+	@make
 	@gcc main.c -L./ -lft -o $@
 
 clean:
