@@ -45,12 +45,9 @@ _IWHITE   =\e[107m
 #                                                                              #
 #******************************************************************************#
 
-UNAME := $(shell uname)
-
-
 NAME = libft.a
 
-SRC_DIR = srcs
+SRC_DIR = $(shell find ./srcs -type d)
 OBJ_DIR = obj
 INC_DIR = includes
 
@@ -79,7 +76,7 @@ SRC+= ft_strncpy.c ft_strnew.c ft_strdel.c ft_strclr.c
 SRC+= ft_striter.c ft_striteri.c ft_strmap.c ft_strequ.c 
 SRC+= ft_strnequ.c ft_strstr.c ft_strndup.c ft_print_memory.c
 
-SRC+= gnl/get_next_line.c ft_valid_extention.c ft_in_charset.c
+SRC+= get_next_line.c ft_valid_extention.c ft_in_charset.c
 SRC+= ft_isnumber.c ft_lstpop_front.c
 
 OBJ     = $(addprefix  $(OBJ_DIR)/,$(SRC:%.c=%.o))
@@ -87,14 +84,14 @@ vpath %.c $(SRC_DIR)
 
 
 CC      = clang
-CFLAGS  = -Wall -Wextra -Werror -g
+CFLAGS  = -Wall -Wextra -Werror #-g
 IFLAGS  =  -I./includes
 
 all: $(NAME)
 
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) $(IFLAGS) $< -o $@
+	@$(CC) $(CFLAGS) $(IFLAGS) -c $< -o $@
 
 # libs:
 # 	@make -s -C ft_printf/
@@ -103,10 +100,10 @@ $(OBJ_DIR)/%.o: %.c
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $^
 	@printf "$(_GREEN)Compiled : $(_MAGENTA)$(NAME)$(_R)\n"
-	@printf "\nDo $(_CYAN)$(_BOLD)make show$(_R) to debug the Makefile\n"
+	@printf "\nDo $(_CYAN)$(_BOLD)make show$(_R) to debug the Makefile\n\n"
 
 show:
-	@printf "$(_MAGENTA)UNAME  :$(_GREEN)  $(UNAME)$(_END)\n"
+	@printf "$(_MAGENTA)UNAME  :$(_GREEN)  $(shell uname)$(_END)\n"
 	@printf "$(_MAGENTA)ARCH   :$(_GREEN)  $(shell uname -p)$(_END)\n\n"
 	@printf "$(_CYAN)CC     :$(_RED)  $(CC)$(_END)\n"
 	@printf "$(_CYAN)CFLAGS :$(_RED)  $(CFLAGS)$(_END)\n\n"
@@ -131,6 +128,6 @@ bonus: $(NAME)
 re_echo:
 	@printf "$(_CYAN)Redoing $(_BOLD)ALLL $(_R)$(_CYAN)$(_DIM)the things$(_R)$(_BOLD)$(_YELLOW)...$(_R)\n\n"
 
-re: re fclean all
+re: re_echo fclean all
 
 .PHONY: all show clean fclean bonus re
